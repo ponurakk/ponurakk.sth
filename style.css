@@ -24,9 +24,6 @@ nav span {
 .nav-span-left {
     bottom: -4px;
 }
-.nav-span-left a:hover img {
-    filter: invert();
-}
 
 /*  header  */
 
