@@ -43,12 +43,15 @@ header div.bg {
     position: relative;
 }
 header div.bg div.bg-inside {
-    position: absolute;
-    width: 50%;
-    max-width: 50%;
-    top: 50%;
-    left: 50%;
+    margin: auto auto;
+    width: max-content;
+    padding: 200px;
     color: white;
+    text-align: center;
+}
+header div.bg div.bg-inside img {
+    border-radius: 50%;
+    width: 300px;
 }
 
 /*  main  */
