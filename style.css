@@ -1,4 +1,11 @@
 /*@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');*/
+:root {
+    --font-light: #ffffff;
+    --font-dark: #000000;
+    --bg-light: #F4F4F5af;
+    --bg-dark: #18181Baf;
+}
+
 ::selection {
     color: red;
     background-color: rgba(0, 0, 0, 0.2);
@@ -8,6 +15,11 @@ body {
     padding: 0;
     background-color: rgb(184, 184, 184);
     font-family: "Andada", sans-serif;
+    background-image: url(img/bg/background.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 }
 
 /*  nav  */
@@ -25,6 +37,14 @@ nav span {
 .nav-span-left {
     bottom: -4px;
 }
+nav i {
+    font-size: 40px;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    cursor: pointer;
+    color: #F4F4F5;
+}
 
 /*  header  */
 
@@ -32,18 +52,13 @@ header {
     width: 100%;
     height: 900px;
     margin-top: -50px;
+    background: none;
 }
 header div.bg {
-    background-image: url(img/bg/Code.png);
     height: 100%;
-
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
 }
 header div.bg div.bg-inside {
-    margin: auto auto;
+    margin: 100px auto;
     width: max-content;
     padding: 200px;
     color: white;
@@ -51,7 +66,7 @@ header div.bg div.bg-inside {
 }
 header div.bg div.bg-inside img {
     border-radius: 50%;
-    width: 300px;
+    width: 55%;
 }
 
 /*  main  */
@@ -59,7 +74,7 @@ main {
     width: 100%;
     margin-top: -7px;
     height: max-content;
-    background-color: rgb(184, 184, 184);
+    background: none;
     position: relative;
 }
 main div.projects {
@@ -73,7 +88,8 @@ main div.projects {
     transition: .2s ease;
 }
 main div.projects div.panel {
-    background-color: whitesmoke;
+    background-color: var(--bg-dark);
+    color: var(--font-light);
     width: 70%;
     height: 500px;
     margin-bottom: 50px;
@@ -118,7 +134,7 @@ main div.projects div.panel div.content-left p.users {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 70%;
+    width: max-content;
     height: 90px;
     max-height: 90px;
     position: absolute;
@@ -127,12 +143,16 @@ main div.projects div.panel div.content-left p.users {
 main div.projects div.panel div.content-left p.users span {
     position: absolute;
     bottom: 90px;
+    width: max-content;
     margin-bottom: 6px;
 }
 main div.projects div.panel div.content-left p.users img {
     border-radius: 50%;
     height: 50px;
     margin-right: 3px;
+}
+main div.projects div.panel div.content-left p.users img:hover {
+    filter: grayscale(100%);
 }
 
 main div.projects div.panel div.content-right {
@@ -171,7 +191,8 @@ main div.sidebar div.content {
     margin: 20px auto auto auto;
     position: sticky;
     top: 90px;
-    background-color: white;
+    background-color: var(--bg-dark);
+    box-shadow: 1px 1px 10px black;
     border-radius: 10px;
 }
 
@@ -242,7 +263,11 @@ footer {
     background-color: black;
     color: white;
     width: 100%;
-    height: 100px;
+    height: 50px;
+}
+footer p {
+    text-align: center;
+    padding-top: 15px;
 }
 
 @media (max-width: 1500px) {
