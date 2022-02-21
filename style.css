@@ -19,7 +19,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
 }
 
 /*  nav  */
@@ -55,18 +56,20 @@ header {
     background: none;
 }
 header div.bg {
-    height: 100%;
+    height: 100vh;
 }
 header div.bg div.bg-inside {
-    margin: 100px auto;
+    margin: 33vh auto auto auto;
     width: max-content;
-    padding: 200px;
     color: white;
     text-align: center;
 }
 header div.bg div.bg-inside img {
     border-radius: 50%;
-    width: 55%;
+    width: 34vh;
+}
+header div.bg div.bg-inside h1 {
+    font-size: 4vh;
 }
 
 /*  main  */
@@ -188,7 +191,7 @@ main div.sidebar {
 main div.sidebar div.content {
     width: 100%;
     height: 84vh;
-    margin: 20px auto auto auto;
+    margin: -20px auto auto auto;
     position: sticky;
     top: 90px;
     background-color: var(--bg-dark);
