@@ -1,1 +1,1 @@
-# ponurakk.smth
+# ponurakk.sth
