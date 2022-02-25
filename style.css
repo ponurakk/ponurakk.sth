@@ -101,11 +101,15 @@ main div.projects {
 
     transition: .2s ease;
 }
+main div.projects h1 {
+    color: #ffffff;
+}
 main div.projects div.panel {
     background-color: var(--bg-dark);
     color: var(--font-light);
     width: 70%;
-    height: 500px;
+    height: max-content;
+    min-height: 450px;
     margin-bottom: 50px;
     border-radius: 10px;
     box-shadow: 5px 5px 10px black;
@@ -148,32 +152,36 @@ main div.projects div.panel div.content-left a:hover {
 }
 main div.projects div.panel div.content-left hr{
     padding-right: 70%;
-    bottom: 130px;
+    top: 57%;
     position: absolute;
 }
-main div.projects div.panel div.content-left p.users {
+main div.projects div.panel div.content-left div.user-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
+    width: 100%;
+    height: 20%;
+    margin-top: 20%;
+}
+main div.projects div.panel div.content-left div.user-container p.users {
     width: max-content;
+    margin: auto 2.5%;
     height: 90px;
     max-height: 90px;
-    position: absolute;
-    bottom: 0;
+    position: relative;
 }
-main div.projects div.panel div.content-left p.users span {
+main div.projects div.panel div.content-left div.user-container p.users span {
     position: absolute;
     bottom: 90px;
-    width: max-content;
+    width: min-content;
     margin-bottom: 6px;
 }
-main div.projects div.panel div.content-left p.users img {
+main div.projects div.panel div.content-left div.user-container p.users img {
     border-radius: 50%;
-    height: 50px;
+    height: 3vw;
     margin-right: 3px;
 }
-main div.projects div.panel div.content-left p.users img:hover {
-    filter: grayscale(100%);
+main div.projects div.panel div.content-left div.user-container p.users img:hover {
+    filter: brightness(60%);
 }
 
 main div.projects div.panel div.content-right {
@@ -322,6 +330,12 @@ footer p {
 
         transition: .2s ease;
     }
+    main div.projects div.panel div.content-left div.user-container p.users img {
+        height: 4vw;
+    }
+    main div.sidebar div.content div.s-media span p a img {
+        width: 4vh;
+    }
 }
 @media (max-width: 1080px) {
     nav {
@@ -356,6 +370,15 @@ footer p {
     main div.projects div.panel div.content-right {
         width: 20%;
     }
+    main div.projects div.panel div.content-left div.user-container {
+        padding-top: 40%;
+    }
+    main div.projects div.panel div.content-left div.user-container p.users img {
+        height: 5vw;
+    }
+    main div.sidebar div.content div.s-media span p a img {
+        width: 3vh;
+    }
 }
 @media (max-width: 750px) {
     nav {
@@ -383,5 +406,8 @@ footer p {
         margin-left: 20px;
 
         transition: .2s ease;
+    }
+    main div.projects div.panel div.content-left div.user-container p.users img {
+        height: 5vw;
     }
 }
