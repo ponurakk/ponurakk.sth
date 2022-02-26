@@ -164,7 +164,7 @@ main div.projects div.panel div.content-left div.user-container {
 }
 main div.projects div.panel div.content-left div.user-container p.users {
     width: max-content;
-    margin: auto 2.5%;
+    margin: 1% 2.5%;
     height: 90px;
     max-height: 90px;
     position: relative;
@@ -225,6 +225,40 @@ main div.sidebar div.content {
     border-radius: 10px;
 }
 
+main div.sidebar div.content div.links {
+    text-align: center;
+}
+main div.sidebar div.content div.links ul {
+    padding: 0;
+    margin: 0;
+}
+main div.sidebar div.content div.links ul li {
+    margin-bottom: 4px;
+    color: var(--font-light);
+    list-style: none;
+    position: relative;
+}
+main div.sidebar div.content div.links ul li:first-of-type {
+    margin-bottom: 10px;
+}
+main div.sidebar div.content div.links ul li a {
+    color: #1e1eaa;
+    text-decoration: none;
+
+    transition: .5s ease-out;
+}
+main div.sidebar div.content div.links ul li:hover a {
+    text-decoration: underline;
+    color: #0000ff;
+
+    transition: .2s ease-in;
+}
+main div.sidebar div.content div.links ul li h3 {
+    color: var(--font-light);
+    padding-top: 20px;
+    font-size: 20px;
+}
+
 main div.sidebar div.content div.s-media {
     position: absolute;
     bottom: 40px;
@@ -256,32 +290,6 @@ main div.sidebar div.content div.s-media span p a img {
     width: 5vh;
     text-decoration: none;
 }
-
-main div.sidebar div.content div.links {
-    margin-top: 10px;
-}
-main div.sidebar div.content div.links ul li {
-    margin-bottom: 4px;
-}
-main div.sidebar div.content div.links ul li:first-of-type {
-    list-style: none;
-    margin-bottom: -10px;
-    margin-left: -20px;
-}
-main div.sidebar div.content div.links ul li a {
-    color: green;
-    text-decoration: none;
-
-    transition: .5s ease-out;
-}
-main div.sidebar div.content div.links ul li:hover a {
-    text-decoration: underline;
-    color: rgb(0, 70, 0);
-    margin-left: 10px;
-
-    transition: .2s ease-in;
-}
-
 main div.sidebar div.content div.s-media p.dc a img {
     margin-bottom: 5%;
     margin-right: 55%;
@@ -318,6 +326,27 @@ footer p {
     padding-top: 15px;
 }
 
+[data-title]:hover:after {
+    transition: all 0.1s ease 0.5s;
+
+    visibility: visible;
+}
+[data-title]:after {
+    content: attr(data-title);
+    position: absolute;
+    top: -1.6em;
+    left: 110%;
+    padding: 4px 8px;
+    color: var(--font-dark);
+    white-space: nowrap;
+    border-radius: 5px;
+    background-color: var(--font-light);
+    z-index: 99999;
+    visibility: hidden;
+}
+[data-title] {
+    position: relative;
+}
 @media (max-width: 1500px) {
     main div.sidebar {
         width: 400px;
